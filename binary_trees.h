@@ -63,4 +63,34 @@ binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
 */
 void binary_tree_delete(binary_tree_t *tree);
 
+/**
+* binary_tree_is_leaf - checks if a node is a leaf
+* @node: pointer to the node to check
+* Return: 1 if node is a leaf, otherwise 0
+*/
+int binary_tree_is_leaf(const binary_tree_t *node);
+
+/**
+* binary_tree_is_root - checks if a node is a root
+* @node: pointer to the node to check
+* Return: 1 if node is a root, otherwise 0
+*/
+int binary_tree_is_root(const binary_tree_t *node);
+
+/**
+* binary_tree_preorder - goes through a binary tree using pre-order traversal
+* @tree: pointer to the root node of the tree to traverse
+* @func: pointer to a function to call for each node
+* Return: void
+*/
+void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
+
+/**
+* binary_tree_inorder - goes through a binary tree using in-order traversal
+* @tree: pointer to the root node of the tree to traverse
+* @func: pointer to a function to call for each node
+* Return: void
+*/
+void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));
+
 #endif /* _BINARY_TREES_H_ */
