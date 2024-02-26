@@ -122,4 +122,53 @@ size_t binary_tree_depth(const binary_tree_t *tree);
 */
 size_t binary_tree_size(const binary_tree_t *tree);
 
+/**
+* binary_tree_leaves - counts the leaves in a binary tree
+* @tree: pointer to the root node of the tree to count the number of leaves
+* Return: number of leaves in the tree, or 0 if tree is NULL
+*/
+size_t binary_tree_leaves(const binary_tree_t *tree);
+
+/**
+* binary_tree_nodes - counts the nodes with at least 1 child in a binary tree
+* @tree: pointer to the root node of the tree to count the number of nodes
+* Return: number of nodes in the tree, or 0 if tree is NULL
+*/
+size_t binary_tree_nodes(const binary_tree_t *tree);
+
+/**
+* binary_tree_balance - measures the balance factor of a binary tree
+* @tree: pointer to the root node of the tree to measure the balance factor
+* Return: balance factor of the tree, or 0 if tree is NULL
+*/
+int binary_tree_balance(const binary_tree_t *tree);
+
+/**
+* binary_tree_is_full - checks if a binary tree is full
+* @tree: pointer to the root node of the tree to check
+* Return: 1 if full, 0 if not or if tree is NULL
+*/
+int binary_tree_is_full(const binary_tree_t *tree);
+
+/**
+* binary_tree_is_perfect - checks if a binary tree is perfect
+* @tree: pointer to the root node of the tree to check
+* Return: 1 if perfect, 0 if not or if tree is NULL
+*/
+int binary_tree_is_perfect(const binary_tree_t *tree);
+
+/**
+* binary_tree_sibling - finds the sibling of a node
+* @node: pointer to the node to find the sibling
+* Return: pointer to the sibling node, or NULL if node has no sibling
+*/
+binary_tree_t *binary_tree_sibling(binary_tree_t *node);
+
+/**
+* binary_tree_uncle - finds the uncle of a node
+* @node: pointer to the node to find the uncle
+* Return: pointer to the uncle node, or NULL if node has no uncle
+*/
+binary_tree_t *binary_tree_uncle(binary_tree_t *node);
+
 #endif /* _BINARY_TREES_H_ */
