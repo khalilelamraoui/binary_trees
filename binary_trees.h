@@ -180,4 +180,34 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 const binary_tree_t *second);
 
+/**
+* binary_tree_levelorder - goes through a binary tree
+* using level-order traversal
+* @tree: pointer to the root node of the tree to traverse
+* @func: pointer to a function to call for each node
+* Return: void
+*/
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
+
+/**
+* binary_tree_is_complete - checks if a binary tree is complete
+* @tree: pointer to the root node of the tree to check
+* Return: 1 if complete, 0 if not
+*/
+int binary_tree_is_complete(const binary_tree_t *tree);
+
+/**
+* binary_tree_rotate_left - performs a left-rotation on a binary tree
+* @tree: pointer to the root node of the tree to rotate
+* Return: pointer to the new root node of the tree once rotated
+*/
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
+
+/**
+* binary_tree_rotate_right - performs a right-rotation on a binary tree
+* @tree: pointer to the root node of the tree to rotate
+* Return: pointer to the new root node of the tree once rotated
+*/
+binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
+
 #endif /* _BINARY_TREES_H_ */
