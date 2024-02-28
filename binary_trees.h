@@ -241,6 +241,38 @@ bst_t *array_to_bst(int *array, size_t size);
 */
 bst_t *bst_search(const bst_t *tree, int value);
 
+/**
+* bst_remove - removes a node from a Binary Search Tree
+* @root: pointer to the root node of the tree where you will remove a node
+* @value: value to remove in the tree
+* Return: pointer to the new root node of the tree after removing the desired
+* value
+*/
+bst_t *bst_remove(bst_t *root, int value);
+
+/**
+* binary_tree_is_avl - checks if a binary tree is a valid AVL Tree
+* @tree: pointer to the root node of the tree to check
+* Return: 1 if tree is a valid AVL Tree, and 0 otherwise
+*/
+int binary_tree_is_avl(const binary_tree_t *tree);
+
+/**
+ * avl_insert - Inserts a value into an AVL tree.
+ * @tree: A double pointer to the root node of the AVL tree to insert into.
+ * @value: The value to insert into the AVL tree.
+ * Return: A pointer to the inserted node, or NULL on failure.
+ */
+avl_t *avl_insert(avl_t **tree, int value);
+
+/**
+* array_to_avl - builds an AVL tree from an array
+* @array: pointer to the first element of the array to be converted
+* @size: number of elements in the array
+* Return: pointer to the root node of the created AVL tree, or NULL on failure
+*/
+avl_t *array_to_avl(int *array, size_t size);
+
 
 
 #endif /* _BINARY_TREES_H_ */
