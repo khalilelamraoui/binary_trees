@@ -210,4 +210,37 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 */
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 
+/**
+* binary_tree_is_bst - checks if a binary tree is a valid Binary Search Tree
+* @tree: pointer to the root node of the tree to check
+* Return: 1 if tree is a valid BST, and 0 otherwise
+*/
+int binary_tree_is_bst(const binary_tree_t *tree);
+
+/**
+* bst_insert - inserts a value in a Binary Search Tree
+* @tree: pointer to the root node of the BST to insert the value
+* @value: value to store in the node to be inserted
+* Return: pointer to the created node, or NULL on failure
+*/
+bst_t *bst_insert(bst_t **tree, int value);
+
+/**
+* array_to_bst - builds a Binary Search Tree from an array
+* @array: pointer to the first element of the array to be converted
+* @size: number of elements in the array
+* Return: pointer to the root node of the created BST, or NULL on failure
+*/
+bst_t *array_to_bst(int *array, size_t size);
+
+/**
+* bst_search - searches for a value in a Binary Search Tree
+* @tree: pointer to the root node of the BST to search
+* @value: value to search in the tree
+* Return: pointer to the node containing a value equals to value
+*/
+bst_t *bst_search(const bst_t *tree, int value);
+
+
+
 #endif /* _BINARY_TREES_H_ */
