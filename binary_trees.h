@@ -312,6 +312,19 @@ heap_t *heap_insert(heap_t **root, int value);
 **/
 heap_t *array_to_heap(int *array, size_t size);
 
+/**
+* heap_extract - extracts the root node of a Max Binary Heap
+* @root: double pointer to the root node of the heap
+* Return: value stored in the root node, 0 on failure
+*/
+int heap_extract(heap_t **root);
 
+/**
+ * heap_to_sorted_array - converts a Binary Max Heap to a sorted array
+ * @heap: pointer to the root node of the heap to convert
+ * @size: address to store the size of the array
+ * Return: pointer to array sorted in descending order
+ **/
+int *heap_to_sorted_array(heap_t *heap, size_t *size);
 
 #endif /* _BINARY_TREES_H_ */
