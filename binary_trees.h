@@ -273,6 +273,45 @@ avl_t *avl_insert(avl_t **tree, int value);
 */
 avl_t *array_to_avl(int *array, size_t size);
 
+/**
+* avl_remove - removes a node from an AVL tree
+* @root: pointer to the root node of the tree for removing a node
+* @value: value to remove in the tree
+* Return: pointer to the new root of the tree after removing the value
+*/
+avl_t *avl_remove(avl_t *root, int value);
+
+/**
+* sorted_array_to_avl - builds an AVL tree from an array
+* @array: pointer to the first element of the array to be converted
+* @size: number of elements in the array
+* Return: pointer to the root node of the created AVL tree, or NULL on failure
+*/
+avl_t *sorted_array_to_avl(int *array, size_t size);
+
+/**
+ * binary_tree_is_heap - checks if a binary tree is heap
+ * @tree: pointer to the node
+ * Return: 1 in case BTS /  0 otherwise
+ **/
+int binary_tree_is_heap(const binary_tree_t *tree);
+
+/**
+ * heap_insert - inserts a value in Max Binary Heap
+ * @root: a double pointer to the root node of the Heap to insert the value
+ * @value: the value to store in the node to be inserted
+ * Return: a pointer to the created node or NULL on failure
+ */
+heap_t *heap_insert(heap_t **root, int value);
+
+/**
+* array_to_heap - builds a Max Binary Heap tree from an array
+* @array: pointer to the first element of the array to be converted
+* @size: number of elements in the array
+* Return: pointer to the root node of the created Max Binary Heap
+**/
+heap_t *array_to_heap(int *array, size_t size);
+
 
 
 #endif /* _BINARY_TREES_H_ */
